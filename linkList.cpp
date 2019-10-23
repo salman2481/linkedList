@@ -3,6 +3,7 @@
 #include"nodeClass.cpp"
 
 using namespace std;
+//this is declaring the class
 
 class cList {
     //The HEAD reference of LIST object
@@ -200,6 +201,24 @@ public:
 			deleteNode(nodeRef->nextNode);
 			delete nodeRef;
 		}
+	}
+		int get()
+	{
+		if (currentnode !=0 )
+		{
+			return currentnode ->getvalue();
+		}
+
+	}
+	//this function takes the currnet node at the headnode
+	void start()
+	{
+		currentnode = headnode;
+	}
+	//this function gives the size of the given list
+	int getsize()
+	{
+		return size;
 	}
 	
 };
